@@ -4,6 +4,8 @@ var ss = SpreadsheetApp.getActiveSpreadsheet();
 var sheet = ss.getSheetByName("SortieScript");
 sheet.activate();
   
+  var email = "youremailhere@email.com";
+  var header = "----------------------------------------------------------------------- Last hour -----------------------------------------------------------------------\n";
   var d = new Date();
   var currentTime = d.toLocaleTimeString();
   // var currentTimeMinusOneHour = d.SetHours(currentTime.getHours() - 1);
@@ -14,7 +16,7 @@ sheet.activate();
   
   // Fetch values for each row in the Range.
   var data = dataRange.getValues();
-  var message  = "----------------------------------------------------------------------- Last hour -----------------------------------------------------------------------\n";
+  var message  = header;
   
   for (i in data) {
     var row = data[i];
@@ -22,8 +24,11 @@ sheet.activate();
     Logger.log(row[0]);
 
   }
-
-  MailApp.sendEmail("cams2207@gmail.com", subject, message);
+  
+  if (message != header)
+  {
+    MailApp.sendEmail(email, subject, message);
+  }
   
   sheet.clear();
   var cell = sheet.getRange("A1");
