@@ -123,7 +123,7 @@ sheet.activate();
           }
           reponse = UrlFetchApp.fetch(apiURL + apiRequest, params);
           
-          MailApp.sendEmail(adresseMail, "Recalibration Stop-Loss", " Recalibration STOP-LOSS pour " + activeOrders[i].symbol + " -- Ancien Prix : " + activeOrders[i].price + " -- Nouveau prix  : " + priceMinus10percent);
+          //MailApp.sendEmail(adresseMail, "Recalibration Stop-Loss", " Recalibration STOP-LOSS pour " + activeOrders[i].symbol + " -- Ancien Prix : " + activeOrders[i].price + " -- Nouveau prix  : " + priceMinus10percent);
                    
           // This logs the value in the very last cell of this sheet
           var lastRow = sheet.getLastRow();
@@ -217,7 +217,7 @@ sheet.activate();
           // A RAJOUTER - Envoi d'un mail
           Logger.log("CREATION : " + balances[i].currency.toUpperCase() + "@" + priceMinus10percent); 
           
-          MailApp.sendEmail(adresseMail, "Nouveau Stop-Loss", " -- Symbol : " + balances[i].currency + " -- Prix : " + priceMinus10percent);
+          //MailApp.sendEmail(adresseMail, "Nouveau Stop-Loss", " -- Symbol : " + balances[i].currency + " -- Prix : " + priceMinus10percent);
           
           // This logs the value in the very last cell of this sheet
           var lastRow = sheet.getLastRow();
