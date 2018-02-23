@@ -1,6 +1,6 @@
 function updateBitfinex() {
-  var key = 'cacoHoMGTgADIzEbvnnRCWrWp2QTz25YYjPi10sSQwh'
-  var secret = "D67f6SlwI8HrGMejMskwt2Ay3xpLUI3bKUDjLDmIm0U";
+  var key = ''
+  var secret = "";
   var adresseMail = "cams2207@gmail.com";
   
 var ss = SpreadsheetApp.getActiveSpreadsheet();
