@@ -20,8 +20,11 @@ sheet.activate();
   
   for (i in data) {
     var row = data[i];
+    if (row[0] != "")
+    {
     message = message + row[0] + "\n";
     Logger.log(row[0]);
+    }
 
   }
   
