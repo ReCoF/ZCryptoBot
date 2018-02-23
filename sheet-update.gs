@@ -1,7 +1,7 @@
 function myFunction() {
   
-var key = 'qLZlAuUY8VEvfHoYTlAZJxNWrer12sHK8a4v7BAO3Gk'
-var secret = "SyUDkwdOgXIeaDqgVKcOUfYzhVOujfRJzS5wK8efc1j"; 
+var key = ''
+var secret = ""; 
 
 var apiURL = "http://api.bitfinex.com";
 var apiRequest = "/v1/balances"; 
